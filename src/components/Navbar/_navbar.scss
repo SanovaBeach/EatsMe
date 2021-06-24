@@ -1,0 +1,68 @@
+@import "../../styles/variables";
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    background-color: $trypan-blue;
+    position: sticky;
+    top: 0; 
+    z-index: 999;
+    font-family: $roboto;
+
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    height: 8rem;
+  }
+
+  &__logo {
+    font-size: 4rem;
+
+    &--icon {
+
+    } 
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    &--item {
+      padding: 0 1rem;
+      font-size: 2.2rem;
+      position: relative;
+      transition: all .3s;
+      overflow: hidden;
+
+      &:before {
+        content: 'EatsMe';
+        position: absolute;
+        bottom: 0;
+        font-size: 1.2rem;
+        width: 100%;
+        z-index: -1;
+        transform: translateX(-150%);
+        transition: all .3s;
+        background-color: white;
+      }
+      &:hover:before {
+        transform: translateX(-50%);
+      } 
+      
+    }
+
+    &--link {
+      height: 8rem;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+
+    }
+  }
+
+}

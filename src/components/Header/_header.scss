@@ -1,0 +1,44 @@
+.Header {
+  padding: 8rem;
+  background-color: $vivid-sky-blue;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+
+    &--img {
+
+      max-width: 100%;
+    }
+
+    &--desc {
+      max-width: 100%;
+      margin-left: 1rem;
+    }
+
+    &--title {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      font-size: 4rem;
+    }
+    &--about {
+      border: 5px solid purple;
+      padding: 1rem;
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    &--link {
+      color: white;
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+html {
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: inherit;
+  font-family: 'Montserrat', sans-serif;
+
+    
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+  width: 100%;
+  z-index: 1;
+
+  @media screen and (max-width: 99rem) {
+    padding: 0 3rem;
+  }
+}
+
+.see-more {
+  border: none;
+  background-color: $vivid-sky-blue;
+  padding: 1rem 2.2rem;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  margin-top: 10rem;
+  border-radius: .5rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}

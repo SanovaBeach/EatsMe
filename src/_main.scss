@@ -1,0 +1,18 @@
+// miscs
+@import "components/Loading/loading";
+@import "components/Title/title";
+@import "components/Navbar/navbar";
+@import "components/Header/header";
+@import "styles/base";
+@import "styles/variables";
+
+// home Page
+@import "components/HomePage/mainContent";
+@import "components/HomePage/item";
+
+// foods page
+@import "components/FoodsPage/foodsList";
+@import "components/FoodsPage/foodFilter";
+
+// single food page
+@import "components/SingleFoodPage/food";

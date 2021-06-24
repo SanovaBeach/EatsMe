@@ -1,0 +1,17 @@
+.MainContent {
+  padding: 5rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 1.5rem;
+  }
+}
