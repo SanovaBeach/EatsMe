@@ -36,9 +36,13 @@
     &--text {
       line-height: 1.5;
       letter-spacing: 1.2px;
+      line-height: 3.5rem;
+
+
     }
 
     &--title {
+      text-transform: uppercase;
     }
     &--price {
       color: gold;
@@ -60,7 +64,21 @@
 
     }
     &--review {
+      margin-top: 2rem;
+      padding: 2rem 3rem;
+      border: 4px dashed $trypan-blue;
+      text-align: center;
+      font-family: $roboto;
 
+      &--heading {
+        font-size: 4rem;
+        margin: 1rem;
+      }
+
+      &--text {
+        font-size: 1.6rem;
+        font-weight: 300;
+      }
     }
   }
 

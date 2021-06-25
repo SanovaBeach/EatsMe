@@ -7,27 +7,44 @@ import {Loading, FoodTypeList} from '../components'
 const FoodType = () => {
   const {foodType} = useParams()
   const [isLoading, setIsLoading] = useState(false)
-  const [food, setFood] = useState([])
+  const [foods, setFoods] = useState([])
   const {formatData} = useFoodsContext()
 
   async function getFoodTypeData(foodType) {
     setIsLoading(true)
-    let {items} = await client.getEntries({
+    const response = await client.getEntries({
       content_type: 'foodReview',
       'fields.foodType': foodType
     })
-    setFood(items)
-    setIsLoading(false)  
+    const data = await formatData(response.items)
+    setFoods(data)
+    setIsLoading(false)
   }
+
   async function getRecommended(foodType) {
     setIsLoading(true)
-    let {items} = await client.getEntries({
+    const response = await client.getEntries({
       content_type: 'foodReview',
       'fields.recommended': true
     })
-    setFood(items)
-    setIsLoading(false)  
+    const data = await formatData(response.items)
+    setFoods(data)
+    setIsLoading(false)
   }
+
+  async function getSearch() {
+    setIsLoading(true)
+    let response = await client.getEntries({
+      'content_type': 'foodReview',
+      'fields.title[match]': 'beer and pizza'
+    })
+    console.log(response)
+    setIsLoading()
+  }
+
+  useEffect(()=> {
+    getSearch('vegan')
+  }, [])
 
   useEffect(()=> {
     if(foodType === 'recommended') {
@@ -38,17 +55,16 @@ const FoodType = () => {
     }
   }, [])
 
-  if(isLoading || food===undefined)  {
+  if(isLoading || foods===undefined)  {
     return <Loading />
   }
 
-  console.log('foods', food)
 
   return (
     <React.Fragment>
-      <h1>Food Type</h1>
-      <p>{foodType}</p>
-      <FoodTypeList />
+
+      <FoodTypeList foods={foods} title={foodType} />
+    
     </React.Fragment>
   )
 }

@@ -3,7 +3,7 @@ import reducer from '../reducer/filter_reducer'
 import {useFoodsContext} from './context'
 
 // actions
-import {LOAD_FOODS, FILTER_FOODS, UPDATE_FILTERS} from '../action'
+import {LOAD_FOODS, FILTER_FOODS, UPDATE_FILTERS, CLEAR_FILTERS} from '../action'
 
 const FilterContext = React.createContext()
 
@@ -47,11 +47,16 @@ export const FilterProvider = ({children}) => {
      dispatch({type: UPDATE_FILTERS, payload: {name, value}})
   }
 
+  const clearFilters = () => {
+    dispatch({type: CLEAR_FILTERS})
+  }
+
   return (
     <FilterContext.Provider
       value={{
         ...state,
-        updateFilters
+        updateFilters,
+        clearFilters
       }}
     >
       {children}

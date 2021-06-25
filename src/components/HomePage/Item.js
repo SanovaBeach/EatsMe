@@ -5,13 +5,13 @@ import { IoIosThumbsDown, IoIosThumbsUp } from 'react-icons/io';
 const Item = ({ food }) => {
   const {
     dishName,
-    id,
+    // id,
     price,
     slug,
     rating,
-    recommended,
-    restaurantName,
-    review,
+    // recommended,
+    // restaurantName,
+    // review,
     vegan,
     dishImage: {
       fields: {

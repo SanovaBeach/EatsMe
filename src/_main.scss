@@ -3,6 +3,8 @@
 @import "components/Title/title";
 @import "components/Navbar/navbar";
 @import "components/Header/header";
+@import "components/Footer/footer";
+@import "components/AboutPage/about";
 @import "styles/base";
 @import "styles/variables";
 
@@ -16,3 +18,6 @@
 
 // single food page
 @import "components/SingleFoodPage/food";
+
+//foodTypeList
+@import "components/FoodTypePage/foodType";

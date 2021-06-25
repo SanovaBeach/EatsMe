@@ -3,13 +3,17 @@
   padding-left: 4rem;
   padding-right: 4rem;
 
+  @media screen and (max-width: $small) {
+    padding: 0;
+    padding-top: 1rem;
+  }
+
   &__container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-
 }
 
 .Form {
@@ -20,77 +24,64 @@
   grid-row-gap: 2rem;
   grid-column-gap: 40px;
 
-  &__group {
-  text-transform: capitalize;
+  @media screen and (max-width: $medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    margin: 0;
+    width: 80%;
+  }
 
+  &__group {
+    text-transform: capitalize;
   }
   &__label {
     display: block;
-  letter-spacing: 1.5;
-  margin-bottom: 0.5rem;
+    letter-spacing: 1.5;
+    margin-bottom: 0.5rem;
+
+    
   }
 
   &__control {
-     width: 100%;
+    width: 100%;
     background: transparent;
     font-size: 1.8rem;
     font-weight: 300;
+
+    @media screen and (max-width: $medium) {
+        margin: 0 1rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+  }
+}
+
+.Clear__filter {
+  background: $vivid-sky-blue;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  box-shadow: 0 4px rgba($vivid-sky-blue, 0.8);
+
+  @media screen and (max-width: $medium) {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    box-shadow: none;
+    border-radius: 10rem;
+    border: 1px solid black;
+    background-color: none;
+
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    transform: translateY(4px);
   }
 }
 
 
-
-
-
-/*  rooms fitler*/
-.filter-container {
-  padding: 5rem 0;
-}
-.filter-form {
-  width: 60vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 40px;
-}
-.form-group {
-  text-transform: capitalize;
-}
-.form-group label {
-  display: block;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 0.5rem;
-}
-.form-control {
-  width: 100%;
-  background: transparent;
-  font-size: 1rem;
-}
-.size-inputs {
-  display: flex;
-}
-.size-input {
-  width: 40%;
-  padding: 0.2rem;
-  border: 1px solid var(--mainBlack);
-  border-radius: 0.3rem;
-  margin-right: 0.3rem;
-}
-.single-extra label {
-  display: inline-block;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-}
-@media screen and (min-width: 776px) {
-  .filter-form {
-    width: 70vw;
-  }
-}
-@media screen and (min-width: 992px) {
-  .filter-form {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-/* end of rooms fitler*/

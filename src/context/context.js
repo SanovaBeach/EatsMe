@@ -1,23 +1,16 @@
-import React, { useContext, useEffect, useReducer,useState } from 'react';
-import reducer from '../reducer/foodReducer'
-import {FOOD_DATA, FOOD_DATA_LOADING, SINGLE_FOOD, SINGLE_FOOD_LOADING} from '../action'
+import React, { useContext, useEffect,useState } from 'react';
+
 import { client } from '../contentful';
 
 
 
-const initialState = {
-  foodData: [],
-  recommendedData: [],
-  singleFood: {},
-  isLoading: false,
-}
+
 
 const FoodsContext = React.createContext();
 
 export const FoodsProvider = ({ children }) => {
   const [foodData, setFoodData] = useState([])
   const [recommendedData, setRecommendedData] = useState([])
-  const [singleFood, setSingleFood] = useState({})
   const [isLoading, setIsLoading] = useState(false)
   const [veganData, setVeganData] = useState([])
   const [seaFoodData, setSeaFoodData] = useState([])
@@ -34,7 +27,6 @@ export const FoodsProvider = ({ children }) => {
       );
       let veganData = await foods.filter((food)=> food.vegan === true)
       let seaFoodData = await foods.filter((food)=> food.foodType === 'seafood')
-      let maxPrice = Math.max(...foods.map((item)=> item.price))
       setFoodData(foods)
       setRecommendedData(recommendedData)
       setVeganData(veganData)

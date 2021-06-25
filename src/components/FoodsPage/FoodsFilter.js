@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useFilterContext } from '../../context/filter_context';
 
 const getUniqueValues = (items, value) => {
@@ -10,6 +10,7 @@ const FoodsFilter = () => {
     allFoods,
     filterFoods, 
     updateFilters,
+    clearFilters,
     filters: {
     restaurantName,
     type,
@@ -22,7 +23,6 @@ const FoodsFilter = () => {
 
   let restaurants = getUniqueValues(allFoods, 'restaurantName')
   restaurants = ['all', ...restaurants]
-  console.log(restaurants)
 
   let types = getUniqueValues(allFoods, 'type')
   types = ['all', ...types]
@@ -30,7 +30,7 @@ const FoodsFilter = () => {
   let foodTypes = getUniqueValues(allFoods, 'foodType')
   foodTypes = ['all', ...foodTypes]
 
-
+  
 
 
   return (
@@ -124,10 +124,18 @@ const FoodsFilter = () => {
           </div>
           {/* end of vegan */}
 
+          <div className="Form__group">
+            <button className="Clear__filter" onClick={clearFilters}>
+              Clear Filter
+            </button>
+          </div>
 
           </form>
         </div>
-        {filterFoods.length === 0 ? (<h5>No match</h5>) : null}
+        {filterFoods.length === 0 ? 
+          (<h5 style={{textTransform: 'uppercase',
+            textAlign: 'center', fontSize: '5rem', marginTop: '4rem', color: 'red'
+        }}>No match</h5>) : null}
       </div>
     </React.Fragment>
   );

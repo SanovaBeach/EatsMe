@@ -1,8 +1,6 @@
 import React from 'react';
 import Item from './Item';
-import {Link, Route} from 'react-router-dom'
-import Loading from '../Loading/Loading'
-import FoodType from '../../pages/FoodType'
+import {Link} from 'react-router-dom'
 import Title from '../Title/Title';
 
 const MainContent = ({foodData, title, size, isLoading, foodType}) => {
@@ -21,12 +19,13 @@ const MainContent = ({foodData, title, size, isLoading, foodType}) => {
           {foodType ? 
             (
             <Link to={`/foods/type/${foodType}`}  className='see-more' >
-             See More
+             Check More about {foodType}
            </Link>
            ) 
            :
            (<Link to='/foods' className='see-more' >
-             See More
+             Check More about Reviews
+             
            </Link>)
            }
         </div>

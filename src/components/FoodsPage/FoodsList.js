@@ -1,14 +1,10 @@
 import React from 'react'
-import {useFoodsContext} from '../../context/context'
 import Item from '../HomePage/Item'
 import {useFilterContext} from '../../context/filter_context'
 
 const FoodsList = () => {
   const {filterFoods} = useFilterContext()
 
-
-
-  
 
   return (
     <React.Fragment>

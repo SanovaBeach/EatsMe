@@ -1,0 +1,147 @@
+.About {
+  padding: 8rem 2rem;
+  background-color: $ultramarine-blue;
+
+  @media screen and (max-width: $small) {
+      padding: 0;
+    }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    @media screen and (max-width: $small) {
+
+    }
+
+  }
+
+  &__contents {
+    display: grid;
+    grid-template-columns:  65% 35%;
+
+    @media screen and (max-width: $small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+  &__left {
+    padding: 2rem 4rem;
+    text-align: center;
+    line-height: 2.6rem;
+
+    @media screen and (max-width: $small) {
+      padding: 0;
+      text-align: justify;
+      line-height: 2rem;
+      font-size: 1.4rem;
+    }
+
+
+    &--heading {
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+
+      @media screen and (max-width: $small) {
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+        padding: 2rem 0;
+      }
+    }
+
+    &--subheading {
+      padding: 2rem 3rem;
+      border: 5px dashed white;
+
+      @media screen and (max-width: $small) {
+        padding: 0 1rem;
+        border: none;
+      }
+    }
+
+    &--img {
+      max-width: 75%;
+      max-height: 55rem;
+
+      @media screen and (max-width: $small) {
+        max-width: 50%;
+        max-height: 25rem;
+      }
+    }
+  }
+
+  &__right {
+    margin-left: 1rem;
+    &--img {
+      width: 100%;
+
+      @media screen and (max-width: $small) {
+        max-width: 50%;
+        max-height: 25rem;
+      }
+    }
+    &--text {
+      text-align: center;
+      margin-top: 1rem;
+
+      @media screen and (max-width: $small) {
+        padding: 0;
+        text-align: justify;
+      }
+    }
+    &--heading {
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    &--desc {
+      padding: 1rem;
+      border: 5px dashed $purple;
+
+      @media screen and (max-width: $small) {
+        border: none;
+        padding: 0;
+      }
+    }
+    &--icons {
+      margin: 1rem;
+    }
+    &--icon {
+      color: white;
+      margin: 5px;
+      font-size: 4rem;
+    }
+
+    &--news {
+      padding: 3rem 1.5rem;
+      background-color: rgba(black, .8);
+      color: white;
+      text-align: center;
+
+      @media screen and (max-width: $small) {
+        text-align: justify;
+        margin-bottom: 2rem;
+      }
+
+      &-title {
+        margin-bottom: 1rem;
+      }
+      &-desc {
+        margin-bottom: 1.5rem;
+      }
+      &-input {
+        padding: 1rem 2rem;
+      }
+      &-icon {
+        display: inline-block;
+        font-size: 4rem;
+        vertical-align: middle;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

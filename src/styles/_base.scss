@@ -22,9 +22,15 @@ body {
   padding: 0 5rem;
   width: 100%;
   z-index: 1;
+  // background-color: tomato;
 
-  @media screen and (max-width: 99rem) {
+
+  @media screen and (max-width: $medium) {
     padding: 0 3rem;
+  }
+  @media screen and (max-width: $small) {
+      padding: 0 1rem;
+      margin: 0 ;
   }
 }
 
@@ -32,8 +38,6 @@ body {
   border: none;
   background-color: $vivid-sky-blue;
   padding: 1rem 2.2rem;
-  position: relative;
-  text-decoration: none;
   color: black;
   margin-top: 10rem;
   border-radius: .5rem;

@@ -59,14 +59,20 @@ const Food = ({ food }) => {
                       {recommended ? ' Yes' : ' No'}
                     </span>
                   </p>
-                  <p className="Food__container--review">
-                    Review: {review}
-                  </p>
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <h2 className="Food__container--review">  
+          <h2 className="Food__container--review--heading">
+            Review
+          </h2>
+          <p className="Food__container--review-text">
+             {review}
+          </p>
+        </h2>
       </div>
     </React.Fragment>
   );

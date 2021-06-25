@@ -1,4 +1,4 @@
-import {LOAD_FOODS, FILTER_FOODS, UPDATE_FILTERS} from '../action'
+import {LOAD_FOODS, FILTER_FOODS, UPDATE_FILTERS, CLEAR_FILTERS} from '../action'
 
 const filter_reducer = (state, action) => {
   if(action.type === LOAD_FOODS) {
@@ -39,6 +39,24 @@ const filter_reducer = (state, action) => {
     tempFoods = tempFoods.filter((food) => food.price <= price)
 
      return {...state, filterFoods: tempFoods}
+  }
+
+  if(action.type === CLEAR_FILTERS) {
+    return {
+      ...state,
+
+      filters: {
+        ...state.filters,
+        restaurantName: 'all',
+        type: 'all',
+        foodType:'all',
+        minPrice: 0,
+        maxPrice: 0,
+        price: state.filters.maxPrice,
+        vegan: false,
+      }
+    }
+
   }
 }
 

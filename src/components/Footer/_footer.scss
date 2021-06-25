@@ -1,0 +1,108 @@
+.Footer {
+  padding: 4rem 4rem;
+  background-color: rgba($trypan-blue, .5);
+  margin-top: 8rem;
+
+  @media screen and (max-width: $small) {
+      padding: 0;
+      text-align: justify;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $medium) {
+      flex-direction: column;
+
+    }
+  }
+
+  &__left {
+    padding: 2rem 4rem;
+    width: 50%;
+    border: 5px dashed white;
+
+    @media screen and (max-width: $small) {
+      padding: 0;
+      text-align: initial;
+      border: none;
+      font-size: 1.4rem;
+    }
+
+    @media screen and (max-width: $medium) {
+      width: 100%;
+      text-align: center;
+    }
+
+    &--title {
+      color: white;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+
+      @media screen and (max-width: $small) {
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &--icons {
+      padding: 1rem;
+      font-size: 3.4rem;
+      text-decoration: none;
+
+      @media screen and (max-width: $small) {
+        font-size: 2.5rem;
+      }
+
+    }
+    &--icon {
+      padding: .5rem;
+      color: black;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    padding: 2rem 2rem;
+    width: 50%;
+    line-height: 2.5rem;
+
+    @media screen and (max-width: $small) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem;
+      margin: 0;
+    }
+    
+    @media screen and (max-width: $medium) {
+      width: 100%;
+    }
+
+
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--title {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    &--link {
+      display: block;
+      color: white;
+      transition: all .3s;
+
+      &:hover {
+        color: rgba(black, .8) ;
+      }
+    }
+
+  
+  }
+}

@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import {useFoodsContext} from '../context/context'
 import {useParams} from 'react-router-dom'
 import {client} from '../contentful'
 import {Loading, Food} from '../components'
