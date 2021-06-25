@@ -80,22 +80,22 @@ const Footer = () => {
               <Link to='/about' className="Footer__right--link">
                 About Me
               </Link>
-              <a href="#" className="Footer__right--link">
+              <Link href="/foods" className="Footer__right--link">
                 Contact
-              </a>
+              </Link>
             </div>
             <div className="Follow__right--column">
               <h3 className="Footer__right--title">Browse</h3>
               <Link to='/foods' className="Footer__right--link">
                 Foods
               </Link>
-              <Link to='#' className="Footer__right--link">
+              <Link to='/foods' className="Footer__right--link">
                 Seafood
               </Link>
-              <Link to='#' className="Footer__right--link">
+              <Link to='/foods' className="Footer__right--link">
                 Healthy Foods
               </Link>
-              <Link to='#' className="Footer__right--link">
+              <Link to='/foods' className="Footer__right--link">
                 Recommended
               </Link>
             </div>
