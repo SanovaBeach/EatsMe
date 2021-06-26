@@ -19,11 +19,10 @@ const SingleFood = () => {
     setIsLoading(false)
   }
 
-  console.log(food)
 
   useEffect(()=> {
     getSingleFood(slug)
-  }, [])
+  }, [slug])
 
   if(isLoading || food===undefined || food.fields === undefined)  {
     return <Loading />

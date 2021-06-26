@@ -53,7 +53,7 @@ const FoodType = () => {
     else {
       getFoodTypeData(foodType)
     }
-  }, [])
+  }, [foodType, getRecommended, getFoodTypeData])
 
   if(isLoading || foods===undefined)  {
     return <Loading />

@@ -39,7 +39,7 @@ export const FoodsProvider = ({ children }) => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [getData]);
 
   
 

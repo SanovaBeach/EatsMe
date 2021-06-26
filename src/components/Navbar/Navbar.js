@@ -22,7 +22,6 @@ const Navbar = () => {
     }
   }
 
-  console.log(click)
 
   useEffect(()=> {
     showButton()
@@ -33,7 +32,6 @@ const Navbar = () => {
       <div className="Navbar">
         <div 
           className={`Navbar__menu container`} 
-          onClick={handleClick}
         >
           <h1 className="Navbar__logo" onClick={closeMobileMenu}>
           <Link to='/' className='Navbar__links--link'>
