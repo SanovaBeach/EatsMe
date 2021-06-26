@@ -42,8 +42,6 @@ export const FilterProvider = ({children}) => {
     if(name === 'vegan') {
       value = e.target.checked
     }
-    console.log('name', name)
-    console.log('value', value)
      dispatch({type: UPDATE_FILTERS, payload: {name, value}})
   }
 

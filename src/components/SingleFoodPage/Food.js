@@ -19,8 +19,6 @@ const Food = ({ food }) => {
       },
     },
   } = food;
-  console.log(food);
-
   return (
     <React.Fragment>
       <div className="Food">

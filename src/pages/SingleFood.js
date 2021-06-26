@@ -7,7 +7,6 @@ const SingleFood = () => {
   const [food, setFood] = useState({})
   const [isLoading, setIsLoading] = useState(false)
   const {slug} = useParams()
-  console.log(slug)
 
   async function getSingleFood(slug) {
     setIsLoading(true)

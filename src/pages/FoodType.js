@@ -32,19 +32,7 @@ const FoodType = () => {
     setIsLoading(false)
   }
 
-  async function getSearch() {
-    setIsLoading(true)
-    let response = await client.getEntries({
-      'content_type': 'foodReview',
-      'fields.title[match]': 'beer and pizza'
-    })
-    console.log(response)
-    setIsLoading()
-  }
-
-  useEffect(()=> {
-    getSearch('vegan')
-  }, [])
+  
 
   useEffect(()=> {
     if(foodType === 'recommended') {
@@ -53,7 +41,7 @@ const FoodType = () => {
     else {
       getFoodTypeData(foodType)
     }
-  }, [foodType, getRecommended, getFoodTypeData])
+  }, [foodType ])
 
   if(isLoading || foods===undefined)  {
     return <Loading />

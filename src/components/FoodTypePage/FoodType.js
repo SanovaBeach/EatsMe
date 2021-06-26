@@ -3,7 +3,6 @@ import Item from '../HomePage/Item'
 import Title from '../Title/Title'
 
 const FoodType = ({foods, title}) => {
-  console.log(foods)
   return (
     <React.Fragment>
       <div className="FoodType">
