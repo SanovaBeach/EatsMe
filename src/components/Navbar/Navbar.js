@@ -42,7 +42,9 @@ const Navbar = () => {
             {click ? <FaTimes /> : <FaBars />}
           </div>
 
-          <ul className={`Navbar__links ${click ? 'show-nav' : 'not-show'}`}>
+          <ul className={`Navbar__links ${click ? 'show-nav' : 'not-show'}`}
+            onClick={closeMobileMenu}
+          >
             <li className="Navbar__links--item">
               <Link to ='/' className='Navbar__links--link'>
                 Home

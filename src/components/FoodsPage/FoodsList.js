@@ -9,15 +9,13 @@ const FoodsList = () => {
   return (
     <React.Fragment>
       <div className="FoodsList">
-        <div className="FoodsList__container container">
-          <div className="FoodsList__section">
+          <div className="FoodsList__section container">
             {
               filterFoods.map((food)=> {
                 return <Item key={food.id} food={food} />
               })
             }
           </div>  
-        </div>
       </div>  
     </React.Fragment>
   )

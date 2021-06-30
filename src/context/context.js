@@ -2,16 +2,12 @@ import React, { useContext, useEffect,useState } from 'react';
 
 import { client } from '../contentful';
 
-
-
-
-
 const FoodsContext = React.createContext();
 
 export const FoodsProvider = ({ children }) => {
   const [foodData, setFoodData] = useState([])
   const [recommendedData, setRecommendedData] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [veganData, setVeganData] = useState([])
   const [seaFoodData, setSeaFoodData] = useState([])
 

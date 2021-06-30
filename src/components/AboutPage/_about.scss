@@ -2,31 +2,28 @@
   padding: 8rem 2rem;
   background-color: $ultramarine-blue;
 
-  @media screen and (max-width: $small) {
-      padding: 0;
-    }
+  @media screen and (max-width: $medium) {
+    padding: 1rem;
+  }
 
   &__container {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 
-    @media screen and (max-width: $small) {
-
+    @media screen and (max-width: $medium) {
+      
     }
-
   }
 
   &__contents {
     display: grid;
-    grid-template-columns:  65% 35%;
+    grid-template-columns: 65% 35%;
 
     @media screen and (max-width: $small) {
       grid-template-columns: 1fr;
     }
   }
-
-
 
   &__left {
     padding: 2rem 4rem;
@@ -39,7 +36,6 @@
       line-height: 2rem;
       font-size: 1.4rem;
     }
-
 
     &--heading {
       text-transform: uppercase;
@@ -118,7 +114,7 @@
 
     &--news {
       padding: 3rem 1.5rem;
-      background-color: rgba(black, .8);
+      background-color: rgba(black, 0.8);
       color: white;
       text-align: center;
 

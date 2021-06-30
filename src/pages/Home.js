@@ -11,7 +11,9 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <Header />
+      {!isLoading &&
+        <Header />
+      }
       <MainContent
         foodData={foodData}
         title="Recently Reviewed"

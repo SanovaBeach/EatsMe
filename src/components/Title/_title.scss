@@ -6,4 +6,13 @@
   font-size: 4.5rem;
   padding: 1.5rem;
   border: 5px dashed $ultramarine-blue;
+
+  @media screen and (max-width: $medium) {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  @media screen and (max-width: $small) {
+    font-size: 1.8rem;
+    border: 0;
+  }
 }

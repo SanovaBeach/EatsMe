@@ -13,7 +13,9 @@ body {
   box-sizing: inherit;
   font-family: 'Montserrat', sans-serif;
 
-    
+  @media screen and (max-width: $medium) {
+    font-size: 1.5rem;
+  }
 }
 
 .container {
@@ -22,11 +24,10 @@ body {
   padding: 0 5rem;
   width: 100%;
   z-index: 1;
-  // background-color: tomato;
 
 
   @media screen and (max-width: $medium) {
-    padding: 0 3rem;
+    padding: 0 1rem;
   }
   @media screen and (max-width: $small) {
       padding: 0 1rem;
@@ -35,13 +36,28 @@ body {
 }
 
 .see-more {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 30rem;
+  margin-top: 10rem;
   border: none;
   background-color: $vivid-sky-blue;
   padding: 1rem 2.2rem;
   color: black;
-  margin-top: 10rem;
   border-radius: .5rem;
   font-size: 2rem;
   text-transform: capitalize;
   cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    background-color: rgba($vivid-sky-blue, .5);
+  }
+
+  @media screen and (max-width: $medium) {
+    font-size: 1.5rem;
+    padding: 5px 1rem;
+    margin-top: 7rem;
+  }
 }

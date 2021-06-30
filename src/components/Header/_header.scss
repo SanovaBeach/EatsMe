@@ -2,6 +2,14 @@
   padding: 8rem;
   background-color: $vivid-sky-blue;
 
+  @media screen and (max-width: $medium) {
+    padding: 2rem;
+  }
+
+  @media screen and (max-width: $small) {
+    padding: 5px;
+  }
+
   &__container {
     display: flex;
     justify-content: center;
@@ -22,8 +30,17 @@
       margin-top: 2rem;
     }
 
+    @media screen and (max-width: $medium) {
+      margin-top: 1rem;
+    }
+
     &--img {
       max-width: 100%;
+
+      @media screen and (max-width: $medium) {
+        max-width: 50%;
+        margin: 0 auto;
+      }
     }
 
     &--desc {
@@ -36,6 +53,16 @@
       font-weight: bold;
       margin-bottom: 2rem;
       font-size: 4rem;
+
+      @media screen and (max-width: $medium) {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      @media screen and (max-width: $medium) {
+        font-size: 1.7rem;
+        margin-bottom: 5px;
+      }
     }
     &--about {
       border: 5px solid purple;
@@ -43,10 +70,29 @@
       color: white;
       font-size: 2rem;
       margin-bottom: 1rem;
+
+      @media screen and (max-width: $medium) {
+        font-size: 1.6rem;
+      }
+      @media screen and (max-width: $medium) {
+        font-size: 1.5rem;
+        border: 0;
+      }
     }
     &--link {
-      color: white;
+      color: black;
       font-size: 2.5rem;
+
+      &:hover {
+        color: rgba(black, 0.2);
+      }
+      @media screen and (max-width: $medium) {
+        font-size: 1.8rem;
+      }
+      @media screen and (max-width: $medium) {
+        font-size: 1.5rem;
+      }
     }
+
   }
 }

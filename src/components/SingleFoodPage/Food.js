@@ -63,7 +63,7 @@ const Food = ({ food }) => {
             </div>
           </div>
         </div>
-        <h2 className="Food__container--review">  
+        <h2 className="Food__container--review container">  
           <h2 className="Food__container--review--heading">
             Review
           </h2>

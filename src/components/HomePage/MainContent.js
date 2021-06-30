@@ -10,8 +10,7 @@ const MainContent = ({foodData, title, size, isLoading, foodType}) => {
     <React.Fragment>
       <div className="MainContent">
         <Title title={title} />
-        <div className="MainContent__container container">
-          <div className="MainContent__reviews">
+          <div className="MainContent__reviews container">
             {foodData.slice(0, size).map((food) => {
               return <Item key={food.id} food={food} />;
             })}
@@ -28,7 +27,6 @@ const MainContent = ({foodData, title, size, isLoading, foodType}) => {
              
            </Link>)
            }
-        </div>
       </div>
       
     </React.Fragment>
