@@ -1,4 +1,4 @@
-#EatsMe
-##A personal review food blog
+# EatsMe
+## A personal review food blog
 
 EatsMe! is made using HTML, SASS, ReactJS, and Contentful (CMS)
